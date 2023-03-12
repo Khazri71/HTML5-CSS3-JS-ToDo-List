@@ -233,30 +233,38 @@ main .to-do-list .no-tasks p i {
 .do {
   background-color: var(--main-color-done);
 }
-
 /*Media Query*/
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
   main .to-do-list {
     width: 100%;
   }
   main .to-do-list .content-act {
-    margin: 70px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
-}
-@media (max-width: 767px) {
   main .to-do-list .content-act .status span {
     display: inline-block;
-    width: 48%;
-    margin-top: 10px;
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+  }
+  main .to-do-list .content-act span {
+    margin-top: 30px;
+  }
+
+  main .to-do-list .add-task span {
+    width: 100%;
+    text-align: center;
+  }
+  main .to-do-list .add-task span i {
+    text-align: center;
+  }
+}
+@media (max-width: 1200px) {
+  main .to-do-list {
+    width: 70%;
   }
 }
 /*End ToDa List*/
